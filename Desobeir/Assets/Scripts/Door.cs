@@ -25,8 +25,8 @@ public class Door : InteractibleDoor {
 
     public void Interaction()
     {
-        //GameManager.addJauge(obeissance);
-        //GameManager.sceneloader(nextScene);
+        GameManager.instance.addJauge(obeissance);
+        GameManager.instance.sceneLoader(nextScene);
     }
 
  

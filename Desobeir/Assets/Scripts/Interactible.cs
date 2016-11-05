@@ -5,8 +5,9 @@ public abstract class Interactible : MonoBehaviour {
 
     // Use this for initialization
     protected bool interactionPossible;
+    protected Color initColor;
     void Start () {
-	
+	    
 	}
 	
 	// Update is called once per frame
@@ -14,24 +15,35 @@ public abstract class Interactible : MonoBehaviour {
 	    
 	}
 
-    public void onTriggerEnter2D(Collider other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("colliiisipfisujfio");
             interactionPossible = true;
         }
     }
 
-    public void onTriggerExit2D(Collider other)
+    public void OnTriggerExit2D(Collider2D other)
     {
         if (other.GetComponent<PlayerController>() != null)
         {
             interactionPossible = false;
         }
     }
+    protected void couleurInteractionPossible(bool estPossible)
+    {
+        if (estPossible)
+        {
+            GetComponent<SpriteRenderer>().color = Color.HSVToRGB(0, 100, 100); //red
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = initColor;
+        }
+    }
 
-    
+
 
 
 
