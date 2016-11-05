@@ -23,7 +23,7 @@ public class Door : InteractibleDoor {
 
     }
 
-    public void Interaction()
+    public override void Interaction()
     {
         GameManager.instance.addJauge(obeissance);
         GameManager.instance.sceneLoader(nextScene);

@@ -12,7 +12,7 @@ public class InfiniteDoor : InteractibleDoor
     {
         initColor = GetComponent<SpriteRenderer>().color;
         GetComponent<CircleCollider2D>().radius = interactionRadius;
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         if (player != null)
         {
             initPosPlayer = player.transform.position;
@@ -28,7 +28,7 @@ public class InfiniteDoor : InteractibleDoor
     }
 
 
-    public void Interaction()
+    public override void  Interaction()
     {
         player.transform.position = initPosPlayer;
     }

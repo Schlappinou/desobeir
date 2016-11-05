@@ -17,7 +17,7 @@ public class Levier : Interactible {
         couleurInteractionPossible(interactionPossible);
 	}
 
-    void Interaction()
+    public override void Interaction()
     {
         GameManager.instance.addJauge(obeissance);
     }
