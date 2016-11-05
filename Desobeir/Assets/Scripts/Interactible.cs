@@ -30,7 +30,6 @@ public abstract class Interactible : MonoBehaviour {
         }
     }
 
-    public abstract void Interaction();
     
 
 

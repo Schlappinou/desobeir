@@ -3,17 +3,12 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
 
-public class Door : Interactible {
+public class Door : InteractibleDoor {
 
     // Use this for initialization
+
     [SerializeField]
-    string nextScene;
-    [SerializeField]
-    Color initColor;
-    [SerializeField]
-    float interactionRadius;
-    [SerializeField]
-    bool obeissance;
+    float obeissance;
 
 
     void Start () {
@@ -28,25 +23,15 @@ public class Door : Interactible {
 
     }
 
-    public override void Interaction()
+    public void Interaction()
     {
-        //GameManager.aObei(obeissance);
-		GameManager.instance.sceneLoader(nextScene);
+        //GameManager.addJauge(obeissance);
+        //GameManager.sceneloader(nextScene);
     }
 
  
 
-    void couleurInteractionPossible(bool estPossible)
-    {
-        if (estPossible)
-        {
-            GetComponent<SpriteRenderer>().color = Color.HSVToRGB(0, 100, 100); //red color
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = initColor;
-        }
-    }
+
 
 
 }
