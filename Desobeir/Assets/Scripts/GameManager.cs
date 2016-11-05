@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	public float Jauge = 46.0F;
+	public float Jauge = 50.0F;
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
 
     //Awake is always called before any Start functions
