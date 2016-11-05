@@ -31,7 +31,7 @@ public class Door : Interactible {
     public override void Interaction()
     {
         //GameManager.aObei(obeissance);
-        //GameManager.sceneloader(nextScene);
+		GameManager.instance.sceneLoader(nextScene);
     }
 
  

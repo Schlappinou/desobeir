@@ -32,17 +32,26 @@ public class GameManager : MonoBehaviour
 
 
     }
-
+	public void addJauge(float f){
+		Jauge += f;
+		
+	}
+	public void sceneLoader(string Sname) {
+		if (Sname != null) {
+			SceneManager.LoadScene("Sname");
+		}
+	}
     //Update is called every frame.
     void Update()
     {
 
-  //       this test is useless but i'm keeping it :) 
+  /*       this test is useless but i'm keeping it :) 
         if (Input.GetKeyDown("space"))
         {
             // Debug.Log("test"); 
             SceneManager.LoadScene("test1");  // load the scene named test1
         }
+        */
         
 
     }
