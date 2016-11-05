@@ -4,7 +4,13 @@ using System.Collections;
 public class Bouton : Interactible {
 
     // Use this for initialization
+    [SerializeField]
     int nombreAppuiPossible;
+    [SerializeField]
+    string nextScene;
+    [SerializeField]
+    bool hasNextScene;
+    [SerializeField]
     float obeissance;
 
 	void Start () {
@@ -16,12 +22,19 @@ public class Bouton : Interactible {
 	
 	}
 
-    void Interaction()
+    public override void Interaction()
     {
         if (nombreAppuiPossible >= 1)
         {
             GameManager.instance.addJauge(obeissance);
-            nombreAppuiPossible--;
+            nombreAppuiPossible -= 1;
+        }
+        else
+        {
+            if (hasNextScene)
+            {
+                GameManager.instance.sceneLoader(nextScene);
+            }
         }
     }
 }
