@@ -73,70 +73,124 @@ public class PlayerController : MonoBehaviour {
 
     Vector3 CanIPass(Vector3 Npos)
     {
+        /* RaycastHit2D Lasthit;
+         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + Npos, -1 * Npos, Npos.magnitude,mask);
+         float dis = Npos.magnitude;
+         if (hits.Length <= 0 )
+         {
+             return (Npos);
+         }
+         Lasthit = hits[0];
+         bool b = true;
+
+         foreach(RaycastHit2D hit in hits)
+         {
+             //Debug.Log("yo"+Time.time);
+
+             if (hit.distance > 0)
+             {
+                 Lasthit = hit;
+                 b = false;
+
+                 dis = Npos.magnitude - hit.distance ;
+                 //dis = signe(Npos.magnitude) * lampda;
+                 //Debug.Log("what " + hit.distance + " : " + Npos.magnitude + " " + dis);
+
+
+             }
+             else
+             {
+                 //Debug.Log("ok " + hit.distance);
+             }
+         }
+         if( b )
+         {
+             return (Npos );
+         }
+         else
+         {
+             velocityT = 100f;
+             return (Npos - Npos.normalized *Pmax(  (Lasthit.distance + lampda),Npos.magnitude));
+         }*/
+        Npos = CanIPass2(Npos);
+        return CanIPass2(Npos);
+        
+
+    }
+
+   Vector3 CanIPass2(Vector3 Npos)
+    {
+        /*Vector3 PX;
+        Vector3 PY;
+
+        float a = Npos.magnitude;
+        Vector2 BA = new Vector2(Y.x, Y.y);
+        Vector2 AC = new Vector2(X.x, X.y);
+        Vector2 BC = new Vector2(Npos.x, Npos.y);
+        float b;
+        float c;
+        float P1 = Mathf.Cos(Vector2.Angle(AC, BC) / 2) * Mathf.Cos((180 - Vector2.Angle(AC, BA) - Vector2.Angle(BC, BA))/2);
+        float P2 = Mathf.Sin(Vector2.Angle(AC, BC) / 2) * Mathf.Sin((180 - Vector2.Angle(AC, BA) - Vector2.Angle(BC, BA)) / 2);
+
+        if(P1 + P2 == 0)
+        {
+           //Debug.Log(" division par 0 !!!!!!!!!!");
+        }
+        b = 1 / 2 * a * (P1 - P2) / (P1 + P2);
+        c = (a + b) * Mathf.Sin(Vector2.Angle( AC, BC) / 2) / Mathf.Cos((180 - Vector2.Angle(AC, BA) - Vector2.Angle(BC, BA)) / 2);
+
+        PX = b * X;
+        PY = c * Y;
+
+       //Debug.Log("test x " + PX.x +" "+PY.x+" "+ Npos.x+" "+(PX + PY == Npos)+" " );
+       //Debug.Log("test y " + PX.y + " " + PY.y + " " + Npos.y + " " + (PX + PY == Npos) + " ");
+       //Debug.Log("test z " + PX.z + " " + PY.z + " " + Npos.z + " " + (PX + PY == Npos) + " ");*/
+
+
         RaycastHit2D Lasthit;
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + Npos, -1 * Npos, Npos.magnitude,mask);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + Npos, -1 * Npos, Npos.magnitude, mask);
         float dis = Npos.magnitude;
-        if (hits.Length <= 0 )
+        if (hits.Length <= 0)
         {
             return (Npos);
         }
         Lasthit = hits[0];
         bool b = true;
 
-        foreach(RaycastHit2D hit in hits)
+        foreach (RaycastHit2D hit in hits)
         {
-            //Debug.Log("yo"+Time.time);
+           //Debug.Log("yo" + Time.time);
 
             if (hit.distance > 0)
             {
                 Lasthit = hit;
                 b = false;
 
-                dis = Npos.magnitude - hit.distance ;
-                //dis = signe(Npos.magnitude) * lampda;
-                //Debug.Log("what " + hit.distance + " : " + Npos.magnitude + " " + dis);
+                dis = Npos.magnitude - hit.distance;
+                dis = signe(Npos.magnitude) * lampda;
+               //Debug.Log("what " + hit.distance + " : " + Npos.magnitude + " " + dis);
 
 
             }
             else
             {
-                //Debug.Log("ok " + hit.distance);
+               //Debug.Log("ok " + hit.distance);
             }
         }
-        if( b )
+        if (b)
         {
-            return (Npos );
+            return (Npos);
         }
         else
         {
             velocityT = 100f;
-            return (Npos - Npos.normalized *Pmax(  (Lasthit.distance + lampda),Npos.magnitude));
+            Vector2 LH = Lasthit.normal * (Lasthit.distance);
+            return (Npos - new Vector3(LH.x,LH.y,0));
         }
 
-        
 
+        //return Npos;
     }
-
-   /* Vector3 CanIPass2(Vector3 Npos)
-    {
-        Vector3 PX;
-        Vector3 PY;
-
-        Vector3 x = new Vector3( 1, 0, 0);
-        Vector3 y = new Vector3( 0, 1, 0);
-
-        float Xpx = Vector3.Dot(x,X);
-        float Xpy = Vector3.Dot(x,Y);
-        float Ypx = Vector3.Dot(y,X);
-        float Ypy = Vector3.Dot(y,Y);
-
-        PX = Xpx * Vector3.Project(Npos, x) + Xpy * Vector3.Project(Npos, y);
-        PY = Ypx * Vector3.Project(Npos, x) + Ypy * Vector3.Project(Npos, y);
-
-        Debug.Log("test " + PX +" "+PY+" "+ Npos+" "+(PX + PY == Npos)+" " );
-
-        return Npos;
-    }*/
 
 	// Update is called once per frame
 	void Update () {
