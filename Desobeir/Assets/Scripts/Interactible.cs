@@ -14,15 +14,16 @@ public abstract class Interactible : MonoBehaviour {
 	    
 	}
 
-    public void onTriggerEnter(Collider other)
+    public void onTriggerEnter2D(Collider other)
     {
         if (other.GetComponent<PlayerController>() != null)
         {
+            Debug.Log("colliiisipfisujfio");
             interactionPossible = true;
         }
     }
 
-    public void onTriggerExit(Collider other)
+    public void onTriggerExit2D(Collider other)
     {
         if (other.GetComponent<PlayerController>() != null)
         {
