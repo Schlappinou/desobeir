@@ -30,6 +30,7 @@ public class PlayerAnimator : MonoBehaviour {
             //here set of value of animator parameters 
             //animator.SetFloat(string parameter name, <float|bool|...> value to be set);
             animator.SetFloat("forward", v);
+            animator.SetFloat("left", f);
 
         }
 

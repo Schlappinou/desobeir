@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Levier.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\RailCam.cs" />
      <Compile Include="Assets\Scripts\SceneMain.cs" />
      <Compile Include="Assets\Scripts\SimpleDoor.cs" />
