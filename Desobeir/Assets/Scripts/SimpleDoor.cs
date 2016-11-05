@@ -14,7 +14,7 @@ public class SimpleDoor : InteractibleDoor {
         couleurInteractionPossible(interactionPossible);
     }
 
-    public override void Interaction()
+    public void Interaction()
     {
         GameManager.instance.sceneLoader(nextScene);
     }

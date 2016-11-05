@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class Interactible : MonoBehaviour {
 
     // Use this for initialization
-    public bool interactionPossible;
+    protected bool interactionPossible;
     protected Color initColor;
     void Start () {
 	    
@@ -42,8 +42,6 @@ public abstract class Interactible : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = initColor;
         }
     }
-
-    public abstract void Interaction();
 
 
 
