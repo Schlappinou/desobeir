@@ -4,8 +4,8 @@ using System.Collections;
 public abstract class Interactible : MonoBehaviour {
 
     // Use this for initialization
-    float interactionRadius;
-	void Start () {
+    protected bool interactionPossible;
+    void Start () {
 	
 	}
 	
@@ -14,9 +14,24 @@ public abstract class Interactible : MonoBehaviour {
 	    
 	}
 
-    public abstract void Interaction();
+    public void onTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerController>() != null)
+        {
+            interactionPossible = true;
+        }
+    }
 
-    public abstract bool isInRange();
+    public void onTriggerExit(Collider other)
+    {
+        if (other.GetComponent<PlayerController>() != null)
+        {
+            interactionPossible = false;
+        }
+    }
+
+    public abstract void Interaction();
+    
 
 
 
