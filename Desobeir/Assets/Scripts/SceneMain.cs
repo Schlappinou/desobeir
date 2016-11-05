@@ -7,6 +7,8 @@ public class SceneMain : MonoBehaviour {
 	private AudioSource[] voix;
 
 	private string[] subttle;
+
+	public bool Tuyauxpris;
 	//public GameObject text;
 	public Text txt;
 
@@ -26,15 +28,16 @@ public class SceneMain : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 //s		txt = text.GetComponent<Text>();
+		Tuyauxpris =false;
 
 		subttle = new string[voix.Length]; 
 		subttle[0] = "C'est super ! ";
 		//Debug.Log ("Je passe la t");
 		ReadVoice (0);
 	}
-	void ReadVoice(int i){
+	public void ReadVoice(int i){
 		float time = voix[i].clip.length;
-		StartCoroutine(readText(5.0F,i));
+		StartCoroutine(readText(time,i));
 		//Debug.Log ("Je passe la r");
 
 		voix [i].Play ();

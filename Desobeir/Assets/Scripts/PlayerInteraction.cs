@@ -7,11 +7,11 @@ public class PlayerInteraction : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
+		if (Input.GetKey(KeyCode.Space))
+        {	
             Interact();
         }
 	}
@@ -31,14 +31,10 @@ public class PlayerInteraction : MonoBehaviour {
                 if (myComponent.interactionPossible)
                 {
                     interactibleFound = true;
-                    Debug.Log("interactible found");
-                    try
-                    {
+					Debug.Log(myComponent.gameObject.transform.name + "interactible found");
+                   
                     myComponent.Interaction();
-                    }
-                    catch
-                    {
-                    }
+                    
                     Debug.Log("interaction done");
                 }
             }

@@ -4,7 +4,8 @@ using System.Collections;
 public abstract class Interactible : MonoBehaviour {
 
     // Use this for initialization
-    public bool interactionPossible;
+	[SerializeField]
+	public bool interactionPossible =false;
     protected Color initColor;
     void Start () {
 	    
@@ -15,9 +16,9 @@ public abstract class Interactible : MonoBehaviour {
 	    
 	}
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
-        
+		//Debug.Log ("Je rentrre dans le lit");
         if (other.GetComponent<PlayerController>() != null)
         {
             interactionPossible = true;
