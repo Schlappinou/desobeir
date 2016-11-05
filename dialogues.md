@@ -343,7 +343,7 @@ Celui qui se croyait malin à me provoquer, me désobéir et ignorer sciemment c
 Ridicule.
  Tous tes petits choix sont exaspérants, tu te penses libres alors que tu ne fais que danser comme un pantin dans la paume de ma main.
  Mais je t’écraserai, imbécile ! 
-Si tu penses pouvoir appeler ton misérable esprit de contradiction « libre arbitre », tu te fourres le doigt dans l’œil jusqu’à l’os. 
+Si tu penses pouvoir appeler ton misérable esprit de contradiction « libre arbitre », tu te trompes lourdemment. Lourdemment. 
 Tu as peut-être percé mes mensonges mais ne me fais pas rire : 
 tu es à moi, rien qu’à moi depuis que je t’ai jeté dans cette cellule crasseuse.
 Je t’offre une dernière chance de te racheter. Une dernière. 
