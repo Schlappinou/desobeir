@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 
         foreach(RaycastHit2D hit in hits)
         {
-            Debug.Log("yo"+Time.time);
+            //Debug.Log("yo"+Time.time);
 
             if (hit.distance > 0)
             {
@@ -94,13 +94,13 @@ public class PlayerController : MonoBehaviour {
 
                 dis = Npos.magnitude - hit.distance ;
                 //dis = signe(Npos.magnitude) * lampda;
-                Debug.Log("what " + hit.distance + " : " + Npos.magnitude + " " + dis);
+                //Debug.Log("what " + hit.distance + " : " + Npos.magnitude + " " + dis);
 
 
             }
             else
             {
-                Debug.Log("ok " + hit.distance);
+                //Debug.Log("ok " + hit.distance);
             }
         }
         if( b )
