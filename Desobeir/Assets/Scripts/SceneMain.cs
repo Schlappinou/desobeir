@@ -29,18 +29,17 @@ public class SceneMain : MonoBehaviour {
 
 		subttle = new string[voix.Length]; 
 		subttle[0] = "C'est super ! ";
-		Debug.Log ("Je passe la t");
+		//Debug.Log ("Je passe la t");
 		ReadVoice (0);
 	}
 	void ReadVoice(int i){
 		float time = voix[i].clip.length;
 		StartCoroutine(readText(5.0F,i));
-		Debug.Log ("Je passe la r");
+		//Debug.Log ("Je passe la r");
 
 		voix [i].Play ();
 	}
 	IEnumerator readText(float time, int i){ 
-		Debug.Log ("Je passe la");
 		while ((time - Time.deltaTime)>0) {
 			if (txt != null) {
 				txt.text = subttle [i];
