@@ -1,37 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
-using System;
 
-public class Door : InteractibleDoor {
+public class SimpleDoor : InteractibleDoor {
 
-    // Use this for initialization
-
-    [SerializeField]
-    float obeissance;
-
-
-    void Start () {
+	// Use this for initialization
+	void Start () {
         initColor = GetComponent<SpriteRenderer>().color;
         GetComponent<CircleCollider2D>().radius = interactionRadius;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-
         couleurInteractionPossible(interactionPossible);
-
     }
 
     public void Interaction()
     {
-        GameManager.instance.addJauge(obeissance);
         GameManager.instance.sceneLoader(nextScene);
     }
-
- 
-
-
-
-
 }
