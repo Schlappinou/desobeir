@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void sceneLoader(string Sname) {
 		if (Sname != null) {
-			SceneManager.LoadScene("Sname");
+			SceneManager.LoadScene(Sname);
 		}
 	}
     //Update is called every frame.
