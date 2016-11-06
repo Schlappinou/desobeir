@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CouType.unity
+- path: Assets/Scenes/03Assenceurs.unity
   isLoaded: 1
   isActive: 1

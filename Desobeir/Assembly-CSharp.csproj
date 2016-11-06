@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bouton.cs" />
+     <Compile Include="Assets\Scripts\Bouton_Ass.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\DoorChambre.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
