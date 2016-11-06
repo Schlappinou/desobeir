@@ -45,8 +45,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bouton.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\DoorChambre.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\InfiniteDoor.cs" />
+     <Compile Include="Assets\Scripts\Interactible.cs" />
+     <Compile Include="Assets\Scripts\InteractibleDoor.cs" />
+     <Compile Include="Assets\Scripts\Levier.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
+     <Compile Include="Assets\Scripts\RailCam.cs" />
+     <Compile Include="Assets\Scripts\SceneMain.cs" />
+     <Compile Include="Assets\Scripts\SimpleDoor.cs" />
+     <Compile Include="Assets\Scripts\SolQuiTombe.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\SpotRangeControll.cs" />
+     <Compile Include="Assets\Scripts\TrompeOeil.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

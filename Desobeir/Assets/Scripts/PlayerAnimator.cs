@@ -22,12 +22,15 @@ public class PlayerAnimator : MonoBehaviour {
     {
         // here value of some imput
         //< float | bool |...> -value to be set- = Input.GetAxis(String name of Imput);
-
+        float f  = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
         if (animator != null)
         {
             //here set of value of animator parameters 
             //animator.SetFloat(string parameter name, <float|bool|...> value to be set);
+            animator.SetFloat("forward", v);
+            animator.SetFloat("left", f);
 
         }
 
