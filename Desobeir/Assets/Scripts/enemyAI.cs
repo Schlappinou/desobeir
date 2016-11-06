@@ -151,6 +151,9 @@ public class enemyAI : Interactible
     void Update()
     {
 
+        animator.SetFloat("jauge", GameManager.instance.Jauge);
+
+
         //Vector2 pl = instance.transform.position;
         //Vector2 mb = transform.position;
         Debug.Log(" perso :" + PlayerController.instance.transform.position.y + " mob :" + transform.position.y);
