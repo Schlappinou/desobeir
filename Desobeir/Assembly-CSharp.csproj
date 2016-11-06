@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\SpotRangeControll.cs" />
      <Compile Include="Assets\Scripts\TrompeOeil.cs" />
      <Compile Include="Assets\Scripts\enemyAI.cs" />
+     <Compile Include="Assets\Scripts\tableAI.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

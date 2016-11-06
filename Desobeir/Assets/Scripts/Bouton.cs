@@ -32,7 +32,7 @@ public class Bouton : Interactible {
             GameManager.instance.addJauge(obeissance);
             nombreAppuiPossible -= 1;
             if (nombreAppuiPossible == 0) {
-                Debug.Log("interaction faite");
+             //   Debug.Log("interaction faite");
                 //SceneMain.instance.ReadVoice (NumeroClipAudio);
                 SceneMain.instance.Tuyauxpris = true;
             }

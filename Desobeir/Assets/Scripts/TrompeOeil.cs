@@ -3,9 +3,15 @@ using System.Collections;
 
 public class TrompeOeil : MonoBehaviour {
 
-    bool triggered;
+    public bool triggered;
+	private Vector3 StartPos;
+	[SerializeField]
+	bool SalleLevier;
+	[SerializeField]
+	int NumPiste;
 	// Use this for initialization
 	void Start () {
+		StartPos = PlayerController.instance.transform.position;
         triggered = false;
 	}
 	
@@ -20,8 +26,11 @@ public class TrompeOeil : MonoBehaviour {
         if (!triggered)
         {	
 
-            triggered = false;
-			SceneMain.instance.ReadVoice (3);        }
+            triggered = true;
+			if (SalleLevier) {SceneMain.instance.ReadVoice (NumPiste);  
+				PlayerController.instance.transform.position = StartPos;
+			}
+			else SceneMain.instance.ReadVoice (NumPiste);        }
     }
 
 }
