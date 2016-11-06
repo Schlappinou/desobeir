@@ -11,7 +11,7 @@ public class PlayerInteraction : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space))
         {	
             Interact();
         }
@@ -19,11 +19,11 @@ public class PlayerInteraction : MonoBehaviour {
 
     void Interact()
     {
-       /* GameObject[] mesInteractibles = GameObject.FindGameObjectsWithTag("Interactible");
+        GameObject[] mesInteractibles = GameObject.FindGameObjectsWithTag("Interactible");
         int nbInteractibles = mesInteractibles.Length;
         bool interactibleFound = false;
         int i = 0;
-        while ((!interactibleFound) && (nbInteractibles !=0) && (i < nbInteractibles))
+        while ((!interactibleFound) && (nbInteractibles != 0) && (i < nbInteractibles))
         {
             Interactible myComponent = mesInteractibles[i].GetComponent<Interactible>();
             i++;
@@ -32,15 +32,15 @@ public class PlayerInteraction : MonoBehaviour {
                 if (myComponent.interactionPossible)
                 {
                     interactibleFound = true;
-					Debug.Log(myComponent.gameObject.transform.name + "interactible found");
-                   
+                    Debug.Log(myComponent.gameObject.transform.name + "interactible found");
+
                     myComponent.Interaction();
-                    
+
                     Debug.Log("interaction done");
                 }
             }
-        }*/
-		
+        }
+
     }
 
 }
