@@ -21,8 +21,12 @@ public abstract class Interactible : MonoBehaviour {
 		//Debug.Log ("Je rentrre dans le lit");
         if (other.GetComponent<PlayerController>() != null)
         {
-            interactionPossible = true;
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				this.Interaction();
+			}
+            //interactionPossible = true;
         }
+
     }
 
     public void OnTriggerExit2D(Collider2D other)

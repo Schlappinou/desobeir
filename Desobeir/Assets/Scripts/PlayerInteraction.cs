@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerInteraction : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour {
 
     void Interact()
     {
-        GameObject[] mesInteractibles = GameObject.FindGameObjectsWithTag("Interactible");
+       /* GameObject[] mesInteractibles = GameObject.FindGameObjectsWithTag("Interactible");
         int nbInteractibles = mesInteractibles.Length;
         bool interactibleFound = false;
         int i = 0;
@@ -38,7 +39,8 @@ public class PlayerInteraction : MonoBehaviour {
                     Debug.Log("interaction done");
                 }
             }
-        }
+        }*/
+		
     }
 
 }
