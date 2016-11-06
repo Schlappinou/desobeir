@@ -13,6 +13,21 @@ public class PlayerController : MonoBehaviour {
             Destroy(gameObject);
     }
 
+    public bool IsAttaque;
+
+    public void attaque()
+    {
+        StartCoroutine(Cattaque());
+    }
+
+    IEnumerator Cattaque()
+    {
+        IsAttaque = true;
+        yield return new WaitForSeconds(.5f);
+        IsAttaque = false;
+    }
+
+
     public GameObject X00;
     public GameObject X10;
     public GameObject X01;

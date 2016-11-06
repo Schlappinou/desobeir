@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemyAI : MonoBehaviour
+public class enemyAI : Interactible
 {
 
     public SpriteRenderer rend;
     public float lampda;
     public float Speed;
     public LayerMask mask;
+    public float obeissance;
 
     float H;
     float V;
@@ -24,9 +25,20 @@ public class enemyAI : MonoBehaviour
 
     }
 
+    public override void Interaction()
+    {
+        GameManager.instance.addJauge(obeissance);
+        PlayerController.instance.attaque();
+        StartCoroutine( Die() );
 
+    }
+    IEnumerator  Die()
+    {
 
+        yield return new WaitForSeconds(.5f);
+        Destroy(gameObject);
 
+    }
 
     float signe(float f)
     {
