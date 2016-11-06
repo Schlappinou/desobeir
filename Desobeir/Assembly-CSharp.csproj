@@ -46,7 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bouton.cs" />
+     <Compile Include="Assets\Scripts\BoutonCouloir08.cs" />
      <Compile Include="Assets\Scripts\Bouton_Ass.cs" />
+     <Compile Include="Assets\Scripts\CamStop.cs" />
+     <Compile Include="Assets\Scripts\DeclencheurSon.cs" />
+     <Compile Include="Assets\Scripts\DeclencheurSonCouloir08.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\DoorChambre.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
