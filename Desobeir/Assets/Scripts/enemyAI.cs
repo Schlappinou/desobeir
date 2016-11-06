@@ -13,8 +13,19 @@ public class enemyAI : Interactible
     float H;
     float V;
     // Use this for initialization
+
+    Animator animator;
+
+    // Use this for initialization
     void Start()
     {
+        // find one time for all the animator attached to this gameobject + Debug
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.Log("Animator is null for " + transform.name);
+        }
+
         if (rend == null)
         {
             rend = GetComponent<SpriteRenderer>();
@@ -34,7 +45,7 @@ public class enemyAI : Interactible
     }
     IEnumerator  Die()
     {
-
+        animator.SetBool("dead", true);
         yield return new WaitForSeconds(.5f);
         Destroy(gameObject);
 
