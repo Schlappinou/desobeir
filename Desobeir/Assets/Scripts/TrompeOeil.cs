@@ -16,11 +16,12 @@ public class TrompeOeil : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+		//Debug.Log ("je passe");
         if (!triggered)
-        {
+        {	
+
             triggered = false;
-            //sceneManager.callNarrateur();
-        }
+			SceneMain.instance.ReadVoice (3);        }
     }
 
 }
