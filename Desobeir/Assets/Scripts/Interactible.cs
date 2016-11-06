@@ -16,7 +16,7 @@ public abstract class Interactible : MonoBehaviour {
 	    
 	}
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
 		//Debug.Log ("Je rentrre dans le lit");
         if (other.GetComponent<PlayerController>() != null)
