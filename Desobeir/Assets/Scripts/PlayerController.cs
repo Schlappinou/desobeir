@@ -3,15 +3,25 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    public static PlayerController instance;
+    void Awake()
+    {
+        //Check if instance already exists
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+    }
+
     public GameObject X00;
     public GameObject X10;
     public GameObject X01;
 
-    Vector3 X;
-    Vector3 Y;
+    public Vector3 X;
+    public Vector3 Y;
     Vector3 YpX;
-    float xX;
-    float yY;
+    public float xX;
+    public float yY;
 
     public float Speed;
     Vector2 LastDep;
