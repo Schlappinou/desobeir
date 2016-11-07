@@ -34,7 +34,7 @@ public class Bouton : Interactible {
             if (nombreAppuiPossible == 0) {
              //   Debug.Log("interaction faite");
                 //SceneMain.instance.ReadVoice (NumeroClipAudio);
-                SceneMain.instance.Tuyauxpris = true;
+                SceneMain1.instance.Tuyauxpris = true;
             }
         }
 

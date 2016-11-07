@@ -31,7 +31,7 @@ public class SceneMain : MonoBehaviour {
 		Tuyauxpris =false;
 
 		subttle = new string[voix.Length]; 
-		subttle[0] = "C'est super ! ";
+		subttle[0] = " ";
 		//Debug.Log ("Je passe la t");
 		ReadVoice (0);
 	}

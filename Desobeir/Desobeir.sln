@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{B955662D-2E76-BC52-092A-3FFA144FA652}") = "Desobeir", "Assembly-CSharp.csproj", "{DDAD7BC8-B50D-B83D-2CC6-7299A8D8A7A2}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desobeir.CSharp", "Desobeir.CSharp.csproj", "{2E34CF5C-6BBA-392C-9E33-7A840CB57BF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DDAD7BC8-B50D-B83D-2CC6-7299A8D8A7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDAD7BC8-B50D-B83D-2CC6-7299A8D8A7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDAD7BC8-B50D-B83D-2CC6-7299A8D8A7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDAD7BC8-B50D-B83D-2CC6-7299A8D8A7A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E34CF5C-6BBA-392C-9E33-7A840CB57BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E34CF5C-6BBA-392C-9E33-7A840CB57BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E34CF5C-6BBA-392C-9E33-7A840CB57BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E34CF5C-6BBA-392C-9E33-7A840CB57BF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

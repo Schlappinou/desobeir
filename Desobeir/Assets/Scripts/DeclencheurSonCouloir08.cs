@@ -29,6 +29,7 @@ public class DeclencheurSonCouloir08 : MonoBehaviour
             hasTriggered = true;
             if (!SceneMain.instance.Tuyauxpris)
             {
+                GameManager.instance.addJauge(10);
                 Debug.Log("lancement piste son");
               //  SceneMain.instance.ReadVoice(NumeroPisteSon);
             }

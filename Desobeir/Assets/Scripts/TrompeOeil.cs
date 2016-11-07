@@ -25,7 +25,10 @@ public class TrompeOeil : MonoBehaviour {
 		//Debug.Log ("je passe");
         if (!triggered)
         {	
-
+            if (!SalleLevier)
+            {
+                GameManager.instance.addJauge(10);
+            }
             triggered = true;
 			if (SalleLevier) {SceneMain.instance.ReadVoice (NumPiste);  
 				PlayerController.instance.transform.position = StartPos;

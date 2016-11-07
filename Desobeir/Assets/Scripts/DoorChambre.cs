@@ -16,7 +16,7 @@ public class DoorChambre : InteractibleDoor {
 	}
 
 	public override void Interaction()
-	{   if (SceneMain.instance.Tuyauxpris) {
+	{   if (SceneMain1.instance.Tuyauxpris) {
 			GameManager.instance.sceneLoader (nextScene);
 		}
 	}

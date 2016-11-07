@@ -1,33 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SolQuiTombe : MonoBehaviour {
+public class SolQuiTombe : MonoBehaviour
+{
 
-    int a;
-	// Use this for initialization
-	void Start () {
-        a = 4;
+
+    // Use this for initialization
+    void Start()
+    {
+
         GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<Rigidbody2D>().isKinematic = true;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<PlayerController>() != null)
         {
-            Invoke("Fall", 0.5f);
+            Invoke("Fall", 1f);
         }
-        
-    }
 
+    }
+    IEnumerator Falling()
+    {
+        for (float i = 20f; i >= 0; i -= 0.1f)
+        {
+            this.transform.position += new Vector3(0, -0.1f, 0);
+            yield return new WaitForSecondsRealtime(0.01f);
+        }
+    }
     void Fall()
     {
-        GetComponent<Rigidbody2D>().isKinematic = false;
-        GetComponent<Rigidbody2D>().gravityScale = 1;
+        if (SceneMain.instance.Tuyauxpris)
+        {
+            StartCoroutine(Falling());
+            //GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
     }
 
 

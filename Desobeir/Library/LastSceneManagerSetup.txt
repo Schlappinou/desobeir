@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/03Assenceurs.unity
+- path: Assets/Scenes/LaChambre.unity
   isLoaded: 1
   isActive: 1

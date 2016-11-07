@@ -34,7 +34,7 @@ public class BoutonCouloir08 : Interactible
             if (nombreAppuiPossible == 0)
             {
                 Debug.Log("interaction faite");
-                SceneMain.instance.ReadVoice (NumeroClipAudio);
+                SceneMain1.instance.ReadVoice (NumeroClipAudio, NumeroClipAudio);
                 SceneMain.instance.Tuyauxpris = true;
             }
         }
